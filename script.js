@@ -8,7 +8,8 @@ for(let i = 0; i < 6; i++) {
 console.log(i)
 
 // const variables:
-const i;
+let name = 'Neil Rogan';
+let age = '24';
+let job = 'podcmaker';
 
-i = 7;
-console.log(i) //error
+console.log(`Hi my name is ${name}, I am ${age} years old and I work full time as a ${job}!`)
