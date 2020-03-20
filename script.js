@@ -120,3 +120,11 @@ console.log(arr1);
 const data = ['this is a test', ...boxes];
 Array.from(data);
 console.log(data)
+
+function checkAge(...years) {
+  years.forEach(el => {
+    console.log(2020 - el >= 18)
+  })
+};
+
+checkAge(1986, 1942, 2015, 1999, 2010)
