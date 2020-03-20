@@ -19,7 +19,7 @@ let ages2 = years.map( (element) =>
   {return (2020 - element)};
 )
 
-console.log(ages2); */
+console.log(ages2);
 
 function Person(name) {
   this.name = name;
@@ -48,3 +48,42 @@ Person.prototype.myfriends5 = function(friends) {
 
 let kim = new Person('Kim');
 kim.myfriends5(friends);
+
+const obj = {
+  first: '1',
+  second: '2',
+  third: '3'
+}
+
+const [a, b, c, d, e] = [16, 2, 3, 4, 5];
+console.log(a)
+ */
+
+//*ES65
+const boxes = document.querySelectorAll('.box');
+
+
+/* function changeBoxColor(color) {
+  //convert node list into array
+  let boxArr = Array.prototype.slice.call(boxes);
+  boxArr.forEach( function(el) {
+    el.style.backgroundColor = color;
+  });
+};
+
+changeBoxColor('green'); */
+
+//*ES6
+
+function changeBoxColor(color) {
+  let boxArr = Array.from(boxes);
+  console.log(boxArr);
+  boxArr.forEach( element => {
+    element.style.backgroundColor = color;
+  });  
+};
+
+changeBoxColor('yellow');
+
+
+
