@@ -77,13 +77,46 @@ changeBoxColor('green'); */
 
 function changeBoxColor(color) {
   let boxArr = Array.from(boxes);
-  console.log(boxArr);
   boxArr.forEach( element => {
     element.style.backgroundColor = color;
   });  
 };
 
-changeBoxColor('yellow');
+changeBoxColor('blue');
+
+for(const el of Array.from(boxes)) {
+  if(el.className.includes('blue')) {
+    continue;
+  }
+  else {
+    el.textContent = 'I am blue now';
+  }
+};
+
+var ages = [2, 15, 16, 25, 11, 22]
+
+const eightenntest = function(el) {
+  el >= 18
+};
+
+let eighteenplus = ages.findIndex((el) => {return el >= 18});
 
 
+console.log(eighteenplus)
 
+function addem(a, b, c) {
+  return a + b+ c;
+}
+
+const arr = [3, 3, 3];
+console.log(addem(...arr));
+
+let arr1 =[1, 2, 3];
+let arr2 = [3, 4, 5];
+arr1 = [...arr1, ...arr2]
+console.log(arr1);
+
+
+const data = ['this is a test', ...boxes];
+Array.from(data);
+console.log(data)
